@@ -10,3 +10,7 @@ type ApiStatus struct {
 	EaGate string `json:"gate"`
 	Db string `json:"db"`
 }
+
+type Ordering struct {
+	OrderBy []string `json:"order_by"`
+}
