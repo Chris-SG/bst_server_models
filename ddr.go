@@ -1,4 +1,4 @@
-package bst_web_models
+package bst_models
 
 import "time"
 

@@ -1,4 +1,4 @@
-package bst_api_models
+package bst_models
 
 type Status struct {
 	Status string `json:"status"`
