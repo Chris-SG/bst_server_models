@@ -6,6 +6,10 @@ type LoginRequest struct {
 	OneTimePassword string `json:"otp,omitempty"`
 }
 
+type LogoutRequest struct {
+	Username string `json:"username"`
+}
+
 type EagateUser struct {
 	Username string `json:"username"`
 	Expired bool

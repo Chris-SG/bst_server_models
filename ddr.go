@@ -45,3 +45,17 @@ type DdrScoresDetailed struct {
 	TopScores []DdrScoresDetailedTopScore `json:"top_scores"`
 	Modes []DdrScoresDetailedMode `json:"modes"`
 }
+
+type DdrStatisticsTable struct {
+	Level int `json:"level"`
+	Title string `json:"title"`
+	Artist string `json:"artist"`
+	Mode string `json:"mode"`
+	Difficulty string `json:"difficulty"`
+	Lamp int `json:"lamp"`
+	Rank string `json:"rank"`
+	Score int `json:"score"`
+	PlayCount int `json:"playcount"`
+	ClearCount int `json:"clearcount"`
+	MaxCombo int `json:"maxcombo"`
+}
