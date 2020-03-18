@@ -52,7 +52,7 @@ type DdrStatisticsTable struct {
 	Artist string `json:"artist"`
 	Mode string `json:"mode"`
 	Difficulty string `json:"difficulty"`
-	Lamp int `json:"lamp"`
+	Lamp string `json:"lamp"`
 	Rank string `json:"rank"`
 	Score int `json:"score"`
 	PlayCount int `json:"playcount"`
