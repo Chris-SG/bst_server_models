@@ -5,6 +5,11 @@ type Status struct {
 	Message string `json:"message,omitempty"`
 }
 
+type ErrorStatus struct {
+	Status string `json:"status"`
+	ErrorMessages []string `json:"error_messages"`
+}
+
 type ApiStatus struct {
 	Api string `json:"api"`
 	EaGate string `json:"gate"`
