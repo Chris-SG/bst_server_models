@@ -12,5 +12,5 @@ type LogoutRequest struct {
 
 type EagateUser struct {
 	Username string `json:"username"`
-	Expired bool
+	Expired bool `json:"expired"`
 }
