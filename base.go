@@ -2,12 +2,8 @@ package bst_models
 
 type Status struct {
 	Status string `json:"status"`
+	ErrorCode int `json:"code,omitempty"`
 	Message string `json:"message,omitempty"`
-}
-
-type ErrorStatus struct {
-	Status string `json:"status"`
-	ErrorMessages []string `json:"error_messages"`
 }
 
 type ApiStatus struct {
