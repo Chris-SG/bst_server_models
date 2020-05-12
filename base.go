@@ -19,3 +19,9 @@ type ApiStatus struct {
 type Ordering struct {
 	OrderBy []string `json:"order_by"`
 }
+
+type UserCache struct {
+	Id int `json:"id"`
+	Nickname string `json:"nickname"`
+	Public bool `json:"public"`
+}
