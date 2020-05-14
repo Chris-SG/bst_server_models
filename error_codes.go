@@ -8,6 +8,10 @@ type Error struct {
 	Message string
 }
 
+func(e1 Error) Equals(e2 Error) bool {
+	return e1.Code == e2.Code
+}
+
 // common errors 0-99
 var (
 	ErrorOK = Error {
@@ -77,6 +81,23 @@ var (
 		CorrespondingHttpCode: http.StatusInternalServerError,
 		Message: "could not write profile changes to db",
 	}
+
+	ErrorBadRequest = Error {
+		Code: 140,
+		CorrespondingHttpCode: http.StatusBadRequest,
+		Message: "failed to get resource",
+	}
+
+	ErrorGormDocument = Error {
+		Code: 160,
+		CorrespondingHttpCode: http.StatusInternalServerError,
+		Message: "failed to convert reader to gorm document",
+	}
+	ErrorGormSelector = Error {
+		Code: 161,
+		CorrespondingHttpCode: http.StatusInternalServerError,
+		Message: "failed to select required elementsG",
+	}
 )
 
 // eagate errors 200-299
@@ -100,17 +121,47 @@ var (
 		CorrespondingHttpCode: http.StatusInternalServerError,
 		Message: "failed to get ddr song ids from eagate",
 	}
+	ErrorDdrSongData = Error {
+		Code: 301,
+		CorrespondingHttpCode: http.StatusInternalServerError,
+		Message: "failed to get ddr song data from eagate",
+	}
+	ErrorDdrSongDifficulties = Error {
+		Code: 302,
+		CorrespondingHttpCode: http.StatusInternalServerError,
+		Message: "failed to get ddr song difficulties from eagate",
+	}
 
 	ErrorDdrSongIdsDbWrite = Error {
 		Code: 330,
 		CorrespondingHttpCode: http.StatusInternalServerError,
 		Message: "failed to write ddr song ids to db",
 	}
+	ErrorDdrSongDataDbWrite = Error {
+		Code: 331,
+		CorrespondingHttpCode: http.StatusInternalServerError,
+		Message: "failed to write ddr song data to db",
+	}
+	ErrorDdrSongDifficultiesDbWrite = Error {
+		Code: 302,
+		CorrespondingHttpCode: http.StatusInternalServerError,
+		Message: "failed to write ddr song difficulties to db",
+	}
 
 	ErrorDdrSongIdsDbRead = Error {
 		Code: 360,
 		CorrespondingHttpCode: http.StatusInternalServerError,
 		Message: "failed to get ddr song ids from db",
+	}
+	ErrorDdrSongDataDbRead = Error {
+		Code: 361,
+		CorrespondingHttpCode: http.StatusInternalServerError,
+		Message: "failed to get ddr song data from db",
+	}
+	ErrorDdrSongDifficultiesDbRead = Error {
+		Code: 302,
+		CorrespondingHttpCode: http.StatusInternalServerError,
+		Message: "failed to read ddr song difficulties from db",
 	}
 )
 
