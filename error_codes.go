@@ -103,6 +103,12 @@ var (
 		Message: "round trip failed",
 	}
 
+	ErrorCache = Error {
+		Code: 80,
+		CorrespondingHttpCode: http.StatusUnauthorized,
+		Message: "missing cache data",
+	}
+
 	ErrorJsonDecode = Error {
 		Code: 90,
 		CorrespondingHttpCode: http.StatusInternalServerError,
