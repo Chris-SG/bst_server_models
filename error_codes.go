@@ -226,6 +226,11 @@ var (
 		CorrespondingHttpCode: http.StatusUnauthorized,
 		Message: "no eagate user found",
 	}
+	ErrorNoEaSub = Error {
+		Code: 203,
+		CorrespondingHttpCode: http.StatusUnauthorized,
+		Message: "ea subscription is not sufficient for this request",
+	}
 
 	ErrorLoginFailed = Error {
 		Code: 210,
