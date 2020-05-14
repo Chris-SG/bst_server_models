@@ -25,9 +25,14 @@ var (
 		Message: "invalid token supplied",
 	}
 	ErrorJwtProfile = Error {
-		Code: 1,
+		Code: 2,
 		CorrespondingHttpCode: http.StatusUnauthorized,
 		Message: "token did not contain correct profile structure",
+	}
+	ErrorScope = Error {
+		Code: 3,
+		CorrespondingHttpCode: http.StatusUnauthorized,
+		Message: "user did not have correct scope",
 	}
 
 	ErrorDBConnection = Error {
