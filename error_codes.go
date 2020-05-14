@@ -245,6 +245,11 @@ var (
 		CorrespondingHttpCode: http.StatusInternalServerError,
 		Message: "failed to get ddr stats from eagate",
 	}
+	ErrorDdrPlayerInfo = Error {
+		Code: 304,
+		CorrespondingHttpCode: http.StatusInternalServerError,
+		Message: "failed to get ddr player info from eagate",
+	}
 
 	ErrorDdrSongIdsDbWrite = Error {
 		Code: 330,
@@ -257,9 +262,19 @@ var (
 		Message: "failed to write ddr song data to db",
 	}
 	ErrorDdrSongDifficultiesDbWrite = Error {
-		Code: 302,
+		Code: 332,
 		CorrespondingHttpCode: http.StatusInternalServerError,
 		Message: "failed to write ddr song difficulties to db",
+	}
+	ErrorDdrStatsDbWrite = Error {
+		Code: 333,
+		CorrespondingHttpCode: http.StatusInternalServerError,
+		Message: "failed to write ddr stats to db",
+	}
+	ErrorDdrPlayerInfoDbWrite = Error {
+		Code: 334,
+		CorrespondingHttpCode: http.StatusInternalServerError,
+		Message: "failed to write ddr player info to db",
 	}
 
 	ErrorDdrSongIdsDbRead = Error {
@@ -273,9 +288,19 @@ var (
 		Message: "failed to get ddr song data from db",
 	}
 	ErrorDdrSongDifficultiesDbRead = Error {
-		Code: 302,
+		Code: 362,
 		CorrespondingHttpCode: http.StatusInternalServerError,
 		Message: "failed to read ddr song difficulties from db",
+	}
+	ErrorDdrStatsDbRead = Error {
+		Code: 363,
+		CorrespondingHttpCode: http.StatusInternalServerError,
+		Message: "failed to read ddr stats from db",
+	}
+	ErrorDdrPlayerInfoDbRead = Error {
+		Code: 364,
+		CorrespondingHttpCode: http.StatusInternalServerError,
+		Message: "failed to read ddr player info from db",
 	}
 )
 
