@@ -51,6 +51,23 @@ var (
 		CorrespondingHttpCode: http.StatusBadRequest,
 		Message: "query did not contain correct contents",
 	}
+	ErrorStringParse = Error {
+		Code: 40,
+		CorrespondingHttpCode: http.StatusInternalServerError,
+		Message: "failed to parse string",
+	}
+
+	ErrorTimeParse = Error {
+		Code: 41,
+		CorrespondingHttpCode: http.StatusInternalServerError,
+		Message: "failed to parse time",
+	}
+
+	ErrorTimeLocLoad = Error {
+		Code: 51,
+		CorrespondingHttpCode: http.StatusInternalServerError,
+		Message: "failed to load timezone",
+	}
 )
 
 // api errors 100-199
