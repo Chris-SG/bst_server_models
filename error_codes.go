@@ -150,16 +150,16 @@ var (
 		CorrespondingHttpCode: http.StatusInternalServerError,
 		Message: "could not read cookie from db",
 	}
-	ErrorWriteUser = Error {
+	ErrorWriteWebUser = Error {
 		Code: 132,
 		CorrespondingHttpCode: http.StatusInternalServerError,
-		Message: "could not write user to db",
+		Message: "could not write web user to db",
 	}
 
-	ErrorReadUser = Error {
+	ErrorReadWebUser = Error {
 		Code: 133,
 		CorrespondingHttpCode: http.StatusInternalServerError,
-		Message: "could not read user from db",
+		Message: "could not read web user from db",
 	}
 
 	ErrorBadRequest = Error {
