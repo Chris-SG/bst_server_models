@@ -139,6 +139,29 @@ var (
 		Message: "could not write profile changes to db",
 	}
 
+	ErrorWriteCookie = Error {
+		Code: 130,
+		CorrespondingHttpCode: http.StatusInternalServerError,
+		Message: "could not write cookie to db",
+	}
+
+	ErrorReadCookie = Error {
+		Code: 131,
+		CorrespondingHttpCode: http.StatusInternalServerError,
+		Message: "could not read cookie from db",
+	}
+	ErrorWriteUser = Error {
+		Code: 132,
+		CorrespondingHttpCode: http.StatusInternalServerError,
+		Message: "could not write user to db",
+	}
+
+	ErrorReadUser = Error {
+		Code: 133,
+		CorrespondingHttpCode: http.StatusInternalServerError,
+		Message: "could not read user from db",
+	}
+
 	ErrorBadRequest = Error {
 		Code: 140,
 		CorrespondingHttpCode: http.StatusBadRequest,
@@ -155,6 +178,18 @@ var (
 		CorrespondingHttpCode: http.StatusInternalServerError,
 		Message: "failed to select required elementsG",
 	}
+
+	ErrorApiProfileDbRead = Error {
+		Code: 180,
+		CorrespondingHttpCode: http.StatusInternalServerError,
+		Message: "failed to read api profile in db",
+	}
+
+	ErrorApiProfileDbWrite = Error {
+		Code: 190,
+		CorrespondingHttpCode: http.StatusInternalServerError,
+		Message: "failed to write api profile to db",
+	}
 )
 
 // eagate errors 200-299
@@ -168,6 +203,11 @@ var (
 		Code: 201,
 		CorrespondingHttpCode: http.StatusUnauthorized,
 		Message: "bad or expired eagate cookie",
+	}
+	ErrorNoEaUser = Error {
+		Code: 202,
+		CorrespondingHttpCode: http.StatusUnauthorized,
+		Message: "no eagate user found",
 	}
 
 	ErrorLoginFailed = Error {
