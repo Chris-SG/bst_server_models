@@ -71,9 +71,38 @@ var (
 	}
 
 	ErrorTimeLocLoad = Error {
-		Code: 51,
+		Code: 50,
 		CorrespondingHttpCode: http.StatusInternalServerError,
 		Message: "failed to load timezone",
+	}
+
+	ErrorCreateRequest = Error {
+		Code: 60,
+		CorrespondingHttpCode: http.StatusInternalServerError,
+		Message: "failed creating http request",
+	}
+
+	ErrorClientRequest = Error {
+		Code: 70,
+		CorrespondingHttpCode: http.StatusInternalServerError,
+		Message: "http client request failed",
+	}
+
+	ErrorClientResponse = Error {
+		Code: 71,
+		CorrespondingHttpCode: http.StatusInternalServerError,
+		Message: "http client response failed",
+	}
+
+	ErrorJsonDecode = Error {
+		Code: 90,
+		CorrespondingHttpCode: http.StatusInternalServerError,
+		Message: "json decoding error",
+	}
+	ErrorJsonEncode = Error {
+		Code: 91,
+		CorrespondingHttpCode: http.StatusInternalServerError,
+		Message: "json encoding error",
 	}
 )
 
