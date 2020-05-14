@@ -51,6 +51,13 @@ var (
 		CorrespondingHttpCode: http.StatusBadRequest,
 		Message: "query did not contain correct contents",
 	}
+
+	ErrorStringSearch = Error {
+		Code: 30,
+		CorrespondingHttpCode: http.StatusInternalServerError,
+		Message: "failed to find required substring",
+	}
+
 	ErrorStringParse = Error {
 		Code: 40,
 		CorrespondingHttpCode: http.StatusInternalServerError,
@@ -147,6 +154,11 @@ var (
 		Code: 302,
 		CorrespondingHttpCode: http.StatusInternalServerError,
 		Message: "failed to get ddr song difficulties from eagate",
+	}
+	ErrorDdrStats = Error {
+		Code: 303,
+		CorrespondingHttpCode: http.StatusInternalServerError,
+		Message: "failed to get ddr stats from eagate",
 	}
 
 	ErrorDdrSongIdsDbWrite = Error {
