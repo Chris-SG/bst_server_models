@@ -87,11 +87,15 @@ var (
 		CorrespondingHttpCode: http.StatusInternalServerError,
 		Message: "http client request failed",
 	}
-
 	ErrorClientResponse = Error {
 		Code: 71,
 		CorrespondingHttpCode: http.StatusInternalServerError,
 		Message: "http client response failed",
+	}
+	ErrorRoundTrip = Error {
+		Code: 72,
+		CorrespondingHttpCode: http.StatusInternalServerError,
+		Message: "round trip failed",
 	}
 
 	ErrorJsonDecode = Error {
@@ -164,6 +168,18 @@ var (
 		Code: 201,
 		CorrespondingHttpCode: http.StatusUnauthorized,
 		Message: "bad or expired eagate cookie",
+	}
+
+	ErrorLoginFailed = Error {
+		Code: 210,
+		CorrespondingHttpCode: http.StatusUnauthorized,
+		Message: "ea login failed",
+	}
+
+	ErrorMd5CharacterMapping = Error {
+		Code: 240,
+		CorrespondingHttpCode: http.StatusInternalServerError,
+		Message: "md5 does not match character",
 	}
 )
 
