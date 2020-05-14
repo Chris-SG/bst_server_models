@@ -305,3 +305,38 @@ var (
 )
 
 // drs errors 400-499
+var (
+
+	ErrorDrsSongData = Error {
+		Code: 401,
+		CorrespondingHttpCode: http.StatusInternalServerError,
+		Message: "failed to get drs song data from eagate",
+	}
+	ErrorDrsPlayerInfo = Error {
+		Code: 404,
+		CorrespondingHttpCode: http.StatusInternalServerError,
+		Message: "failed to get drs player info from eagate",
+	}
+
+	ErrorDrsSongDataDbWrite = Error {
+		Code: 431,
+		CorrespondingHttpCode: http.StatusInternalServerError,
+		Message: "failed to write drs song data to db",
+	}
+	ErrorDrsPlayerInfoDbWrite = Error {
+		Code: 434,
+		CorrespondingHttpCode: http.StatusInternalServerError,
+		Message: "failed to write drs player info to db",
+	}
+
+	ErrorDrsSongDataDbRead = Error {
+		Code: 431,
+		CorrespondingHttpCode: http.StatusInternalServerError,
+		Message: "failed to get drs song data from db",
+	}
+	ErrorDrsPlayerInfoDbRead = Error {
+		Code: 464,
+		CorrespondingHttpCode: http.StatusInternalServerError,
+		Message: "failed to get drs player info from db",
+	}
+)
