@@ -123,6 +123,12 @@ var (
 
 // api errors 100-199
 var (
+	ErrorApiInaccessible = Error {
+		Code: 100,
+		CorrespondingHttpCode: http.StatusInternalServerError,
+		Message: "cannot access api",
+	}
+
 	ErrorPrivateUser = Error {
 		Code: 110,
 		CorrespondingHttpCode: http.StatusForbidden,
