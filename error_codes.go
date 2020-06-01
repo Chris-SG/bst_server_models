@@ -238,6 +238,12 @@ var (
 		Message: "ea login failed",
 	}
 
+	ErrorIncorrectDetails = Error {
+		Code: 211,
+		CorrespondingHttpCode: http.StatusUnauthorized,
+		Message: "incorrect username or password",
+	}
+
 	ErrorMd5CharacterMapping = Error {
 		Code: 240,
 		CorrespondingHttpCode: http.StatusInternalServerError,
