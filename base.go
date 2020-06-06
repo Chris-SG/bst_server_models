@@ -14,4 +14,9 @@ type UserCache struct {
 	Id int `json:"id"`
 	Nickname string `json:"nickname"`
 	Public bool `json:"public"`
+
+	Subscription string `json:"subscription"`
+	EventParticipation bool `json:"event_participation"`
+	DdrAutoUpdate bool `json:"ddr_update"`
+	DrsAutoUpdate bool `json:"drs_update"`
 }
