@@ -278,6 +278,11 @@ var (
 		CorrespondingHttpCode: http.StatusInternalServerError,
 		Message: "failed to get ddr player info from eagate",
 	}
+	ErrorDdrNotPlayed = Error {
+		Code: 305,
+		CorrespondingHttpCode: http.StatusBadRequest,
+		Message: "user has not played ddr",
+	}
 
 	ErrorDdrSongIdsDbWrite = Error {
 		Code: 330,
@@ -329,6 +334,11 @@ var (
 		Code: 364,
 		CorrespondingHttpCode: http.StatusInternalServerError,
 		Message: "failed to read ddr player info from db",
+	}
+	ErrorDdrPlayerNotFound = Error {
+		Code: 365,
+		CorrespondingHttpCode: http.StatusNotFound,
+		Message: "no ddr player found for user",
 	}
 )
 
